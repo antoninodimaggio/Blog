@@ -1,0 +1,56 @@
+title = "Antonino DiMaggio"
+baseURL = "https://antoninodimaggio.com"
+tags = ["data science", "machine learning", "renewables"]
+languageCode = "en-US"
+config = "config.toml"
+theme = "osprey"
+canonifyURLS = true
+googleAnalytics = "UA-168002660-1"
+pygmentsUseClasses = true
+minify = true
+
+[markup]
+  [markup.highlight]
+    style = "github"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[taxonomy]
+    tag = "tags"
+
+[permalinks]
+    blog = "/blog/:slug"
+
+[Params]
+    headline = "antonino dimaggio"
+    subheadline = "data science, renewables"
+    author = "Antonino DiMaggio"
+    description = "data science, renewables"
+    logoSmall = "/images/profile_photo_1080_1080.jpg"
+    twitterCardImg = "/images/default_summary_card_large_1440_720.jpg"
+    favicon = "/images/favicon.ico"
+    opengraphImage = "images/profile_photo_1080_1080.jpg"
+    twitter = "tonyjdimaggio"
+    linkedin = "antoninodimaggio"
+    github = "antoninodimaggio"
+    email = "antoninodimaggio@gmail.com"
+    googleTagManager = ""
+    highlightJS = true
+    copyright = true
+    credit = false
+    customCSS = false
+    cacheBustCSS = false
+    cacheBustJS = false
+    ajaxFormspree = false
+
+
+[[menu.main]]
+    name = "About"
+    url  = "/#about"
+    weight = 1
+
+[[menu.main]]
+    name = "Blog"
+    url  = "/#blog"
+    weight = 2

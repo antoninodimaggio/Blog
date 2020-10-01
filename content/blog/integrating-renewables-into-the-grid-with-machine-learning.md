@@ -1,13 +1,16 @@
 ---
 aliases:
   - /integrating-renewables-into-the-grid-with-machine-learning.html/
+article : true
 author: "Antonino DiMaggio"
 date: 2020-09-06
-description: The complexities of integrating renewables into the grid are here. Machine learning will be key in helping to make this transition possible.
-linktitle: Integrating Renewables Into The Grid With Machine Learning
-title: Integrating Renewables Into The Grid With Machine Learning
+description: "The complexities of integrating renewables into the grid are here. Machine learning will be key in helping to make this transition possible."
+draft: false
+hasmath: false
+linktitle: "Integrating Renewables Into The Grid With Machine Learning"
 tags:
   - renewable energy
+title: "Integrating Renewables Into The Grid With Machine Learning"
 ---
 
 Renewables, such as solar and wind, are beginning to reach economies of scale and, in some cases, are already cheaper than more traditional power plants burning coal and natural gas [[1]](https://www.nrel.gov/docs/fy19osti/72842.pdf). For the purposes of this post, I will mainly focus on utility-scale solar, which will help to simplify the conversation. Solar is improving fast with photovoltaics, inverters, and batteries getting better everyday. Solar is economically cheaper, therefore in an ideal [homo economicus](https://en.wikipedia.org/wiki/Homo_economicus) framed world solar should be everywhere. The challenge that is stopping solar from growing at an even faster rate comes down to simple supply and demand.

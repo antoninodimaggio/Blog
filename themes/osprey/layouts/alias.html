@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ .Params.Permalink }}</title>
+    <link rel=canonical href="{{ .Params.Permalink }}">
+    <meta name=robots content="noindex"><meta charset=utf-8><meta http-equiv=refresh content="0; url={{ .Params.Permalink }}">
+    {{ if .Site.Params.twitter }}
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:site" content="@{{ .Site.Params.twitter }}">
+      <meta name="twitter:creator" content="@{{ .Site.Params.twitter }}">
+      <meta name="twitter:description" content="{{ .Description }}">
+      {{ if .Params.title }}
+        <meta name="twitter:title" content="{{ .Params.title }}">
+      {{ end }}
+      {{ if .Params.twitterCardImg }}
+        <meta name="twitter:image" content="{{ .Params.twitterCardImg | absURL }}">
+      {{ else }}
+        <meta name="twitter:image" content="{{ .Site.Params.twitterCardImg | absURL }}">
+      {{ end }}
+    {{ end }}
+  </head>
+</html>

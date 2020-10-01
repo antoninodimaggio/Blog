@@ -8,6 +8,7 @@ canonifyURLS = true
 googleAnalytics = "UA-168002660-1"
 pygmentsUseClasses = true
 minify = true
+buildDrafts = true
 
 [markup]
   [markup.highlight]

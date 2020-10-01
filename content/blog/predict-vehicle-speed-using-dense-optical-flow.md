@@ -1,14 +1,17 @@
 ---
 aliases:
   - /predict-vehicle-speed-using-dense-optical-flow.html/
+article : true
 author: "Antonino DiMaggio"
 date: 2020-08-04
-description:  Predict vehicle speed using dashcam videos and neural networks. Inspired by comma.ai speed challenge.
+description: Predict vehicle speed using dashcam videos and neural networks. Inspired by comma.ai speed challenge.
+draft: false
+hasmath: false
 linktitle: Predict Vehicle Speed Using Dense Optical Flow
-title: Predict Vehicle Speed Using Dense Optical Flow
 tags:
   - computer vison
   - autonomous vehicles
+title: Predict Vehicle Speed Using Dense Optical Flow
 ---
 
 I stumbled across the [comma.ai speed challenge](https://github.com/commaai/speedchallenge) so I decided to give it a shot. There are two dashcam videos: one video is used for training (20,400 frames @ 20 FPS) and the other video is used for testing (10,798 frames @ 20 FPS). The training video is accompanied by the ground truth speed at each frame. The objective is to predict the speed of the test video at each frame. I also managed to acquire a [third video](https://github.com/antoninodimaggio/Voof/blob/master/data/test/test.mp4) with the accompanying ground truth speeds which will serve as a test measure to see how well the methods demonstrated can generalize.

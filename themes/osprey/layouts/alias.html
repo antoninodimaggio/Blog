@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{{ .Params.Permalink }}</title>
-    <link rel=canonical href="{{ .Params.Permalink }}">
-    <meta name=robots content="noindex"><meta charset=utf-8><meta http-equiv=refresh content="0; url={{ .Params.Permalink }}">
+    <title>{{ .Page.Permalink }}</title>
+    <link rel=canonical href="{{ .Page.Permalink }}">
+    <meta name=robots content="noindex"><meta charset=utf-8><meta http-equiv=refresh content="0; url={{ .Page.Permalink }}">
     {{ if .Site.Params.twitter }}
       <meta name="twitter:card" content="summary_large_image">
       <meta name="twitter:site" content="@{{ .Site.Params.twitter }}">

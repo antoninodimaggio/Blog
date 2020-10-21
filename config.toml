@@ -1,6 +1,7 @@
 title = "Antonino DiMaggio"
 baseURL = "https://antoninodimaggio.com"
-tags = ["data science", "machine learning", "renewables"]
+# "data science", "machine learning", "renewables"
+tags = []
 languageCode = "en-US"
 config = "config.toml"
 theme = "osprey"
@@ -8,7 +9,7 @@ canonifyURLS = true
 googleAnalytics = "UA-168002660-1"
 pygmentsUseClasses = true
 minify = true
-buildDrafts = true
+buildDrafts = false
 
 [markup]
   [markup.highlight]
@@ -24,8 +25,9 @@ buildDrafts = true
     blog = "/blog/:slug"
 
 [Params]
-    headline = "antonino dimaggio"
-    subheadline = "data science, renewables"
+    headline = 'antonino dimaggio'
+    # data science, renewables
+    subheadline = ""
     author = "Antonino DiMaggio"
     description = "data science, renewables"
     logoSmall = "/images/profile_photo_1080_1080.jpg"

@@ -57,3 +57,8 @@ buildDrafts = false
     name = "Blog"
     url  = "/#blog"
     weight = 2
+
+[[menu.main]]
+    name = "Newsletter"
+    url  = "/#newsletter"
+    weight = 3

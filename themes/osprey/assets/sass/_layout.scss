@@ -16,6 +16,7 @@
 html {
   box-sizing: inherit;
   overflow-x: hidden;
+  overscroll-behavior-y: none;
 }
 
 body {

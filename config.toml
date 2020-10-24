@@ -26,8 +26,7 @@ buildDrafts = false
 
 [Params]
     headline = 'antonino dimaggio'
-    # data science, renewables
-    subheadline = ""
+    subheadline = "" # data science, renewables
     author = "Antonino DiMaggio"
     description = "data science, renewables"
     logoSmall = "/images/profile_photo_1080_1080.jpg"
@@ -39,13 +38,7 @@ buildDrafts = false
     github = "antoninodimaggio"
     email = "antoninodimaggio@gmail.com"
     googleTagManager = ""
-    highlightJS = true
     copyright = true
-    credit = false
-    customCSS = false
-    cacheBustCSS = false
-    cacheBustJS = false
-    ajaxFormspree = false
 
 
 [[menu.main]]

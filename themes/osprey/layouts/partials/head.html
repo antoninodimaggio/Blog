@@ -45,22 +45,22 @@
   {{ if .Site.Params.author }}
     <meta name="author" content="{{ .Site.Params.author }}">
   {{ end }}
-
   {{ if .Site.Params.twitter }}
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@{{ .Site.Params.twitter }}">
     <meta name="twitter:creator" content="@{{ .Site.Params.twitter }}">
     <meta name="twitter:description" content="{{ .Description }}">
+    <!-- Add to front matter of post-->
     {{ if .Params.title }}
       <meta name="twitter:title" content="{{ .Params.title }}">
     {{ end }}
+    <!-- Add to front matter of post: aspect ratio of 2:1 with minimum dimensions of 300x157 or maximum of 4096x4096 -->
     {{ if .Params.twitterCardImg }}
       <meta name="twitter:image" content="{{ .Params.twitterCardImg | absURL }}">
     {{ else }}
       <meta name="twitter:image" content="{{ .Site.Params.twitterCardImg | absURL }}">
     {{ end }}
   {{ end }}
-
   <meta property="og:locale" content="en_US">
   <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else if .Params.heading }}{{ .Params.heading }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}">
   <meta property="og:type" content="website">
@@ -70,6 +70,7 @@
   {{ if .Site.Params.opengraphImage}}
     <meta property="og:image" content="{{ .Site.BaseURL }}{{ .Site.Params.opengraphImage}}">
   {{ end }}
+  <!-- Add to front matter of post-->
   {{ if .Description }}
     <meta name="og:description" content="{{ .Description }}">
   {{ else if .Site.Params.description }}
@@ -77,42 +78,23 @@
   {{ else if .Summary }}
     <meta name="og:description" content="{{ .Summary }}">
   {{ end }}
-
   {{ if .Site.Params.favicon }}
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ .Site.Params.favicon }}">
+    <link rel="icon" type="image/png" href="{{ .Site.Params.favicon }}">
     <meta name="theme-color" content="#FFF">
   {{ end }}
-
-  {{if .Params.hasmath }}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
-  {{ end }}
-
   <link rel="canonical" href="{{ .Permalink }}">
-
   {{ with .OutputFormats.Get "RSS" }}
     <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}">
   {{ end }}
-
+  <!-- Latex rendering: add to front matter  -->
+  {{if .Params.hasmath }}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  {{ end }}
   <link rel="stylesheet" href="{{ (resources.Get "sass/main.scss" | resources.ToCSS (dict "targetPath" "style.css" "outputStyle" "compressed") | resources.Fingerprint).Permalink }}" type="text/css">
-
-  {{ if .Site.Params.customCSS }}
-    {{ partial "css.html" . }}
-  {{ end }}
-
-  {{ if .Site.Params.lazyLoading }}
-    <style>.lazyload{opacity:.0001;}.logo .lazyload{min-width:10em;}</style>
-    <script src="{{ (resources.Get "js/vendor/lazysizes.min.js").Permalink }}" async></script>
-  {{ end }}
-
-  {{ if .Site.Params.highlightJS }}
-    {{ if .Site.Params.highlightJSStyle }}
-      <link rel="stylesheet" href="{{ .Site.Params.highlightJSStyle }}">
-    {{ else }}
+  <!-- Code highlighting: add to front matter  -->
+  {{ if .Params.highlightJS }}
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
-    {{ end }}
   {{ end }}
-  <script
-  src="https://code.jquery.com/jquery-3.5.1.min.js"
-  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-  crossorigin="anonymous"></script>
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 </head>

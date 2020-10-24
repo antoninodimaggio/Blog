@@ -43,7 +43,6 @@ nav {
   bottom: 0;
   z-index: 100;
   text-align: center;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, .4 );
   h3 {
     margin: 0;
     font-family: $font-body;
@@ -69,6 +68,7 @@ nav {
   position: fixed;
   top: 0;
   bottom: auto;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, .4);
 }
 .nav-full {
   position: fixed;
@@ -91,13 +91,14 @@ nav {
   transform: translate(-100vw, 0px);
 }
 main {
-  background-color: #fff;
-  transform: translate(0px, 0px);
-  transition: 0.25s ease-in;
+  transition: .25s ease-in;
+  background-color: $white;
+
+  &.active {
+    transform: translate(-100vw, 0);
+  }
 }
-main.active {
-  transform: translate(-100vw, 0px);
-}
+
 .container {
   max-width: 43.750rem; // 700px
   padding: $vertical-rhythm * 2 0 $vertical-rhythm * 2;
@@ -306,6 +307,12 @@ h1, h2, h3 {
   }
 }
 .blog {
+  // min-height: 100vh;
+  padding-bottom: $vertical-rhythm * 2;
+  background-color: #fff;
+}
+
+.tags {
   min-height: 100vh;
   background-color: #fff;
 }
@@ -376,13 +383,14 @@ h1, h2, h3 {
 input {
   background-color: #FFF;
   border-color: $smoke;
-  border-radius: 0px;
-  border-width: 0px;
+  border-radius: 3px;
+  border-width: 1px;
   border-style: solid;
   color: $black;
   padding: 10px;
   margin: 8px 0;
   width: 100%;
+  -webkit-appearance: none;
   &[type="email"]:focus {
     outline: none;
   }

@@ -9,7 +9,7 @@
   <header class="row middle-xs center-xs">
     <div class="col-xs-12">
       <div class="row middle-xs center-xs">
-        <div class="col-xs-12"><img style="border-radius: 50%;"{{ if .Site.Params.lazyLoading }}data-src="{{ .Site.Params.logoSmall }}" lazyload="on"{{ else }}src="{{ .Site.Params.logoSmall }}"{{ end }} alt="{{ .Site.Title }}" class="home-logo {{ if .Site.Params.lazyLoading }}lazyload{{ end }}"></div>
+        <div class="col-xs-12"><img style="border-radius: 50%;" src="{{ .Site.Params.logoSmall }}" alt="{{ .Site.Title }}" class="home-logo"></div>
       </div>
       <div class="row middle-xs center-xs">
         <div class="col-xs-12">
@@ -23,7 +23,7 @@
 
 <nav class="row middle-xs center-xs">
   <div class="col-xs-6 col-sm-1 logo">
-    <a href="{{ "#" | relLangURL }}"><img style="border-radius: 50%" {{ if .Site.Params.lazyLoading }}data-src="{{ .Site.Params.logoSmall }}" class="lazyload" lazyload="on"{{ else }}src="{{ .Site.Params.logoSmall }}"{{ end }} alt="{{ .Site.Title }}"></a>
+    <a href="{{ "#" | relLangURL }}"><img style="border-radius: 50%" src="{{ .Site.Params.logoSmall }}" alt="{{ .Site.Title }}"></a>
   </div>
     {{ range .Site.Menus.main }}
       <div class="col-xs-3 col-sm-2">
@@ -32,12 +32,13 @@
     {{ end }}
   <div class="col-xs-6 col-sm-1 nav-toggle">
       <a href="" class="nav-icon" onclick="return false">
-        <img {{ if .Site.Params.lazyLoading }}data-src="/images/icon-menu.png" class="lazyload" lazyload="on"{{ else }}src="/images/icon-menu.png"{{ end }} alt="Open Menu" style="width:45px;height:auto;">
-        <img {{ if .Site.Params.lazyLoading }}data-src="/images/icon-x.png" class="lazyload" lazyload="on"{{ else }}src="/images/icon-x.png"{{ end }} alt="Close Menu" style="display:none;width:45px;height:auto;">
+        <img src="/images/icon-menu.png" alt="Open Menu" style="width:45px;height:auto;">
+        <img src="/images/icon-x.png" alt="Close Menu" style="display:none;width:45px;height:auto;">
       </a>
   </div>
 </nav>
 
+<!-- Resulting menu from hamburger -->
 <section class="nav-full row middle-xs center-xs">
   <div class="col-xs-12">
     <div class="row middle-xs center-xs">

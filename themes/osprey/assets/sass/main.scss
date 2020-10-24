@@ -391,7 +391,7 @@ input {
     color: #FFF;
     transition: .2s ease-out;
     &:hover {
-      background-color: $buttonhover;
+      background-color: $accent;
       color: #FFF;
       cursor: pointer;
     }

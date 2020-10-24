@@ -306,9 +306,14 @@ h1, h2, h3 {
     font-family: $font-body;
   }
 }
-.blog {
+.blog-home {
   // min-height: 100vh;
   padding-bottom: $vertical-rhythm * 2;
+  background-color: #fff;
+}
+
+.blog {
+  min-height: 100vh;
   background-color: #fff;
 }
 
@@ -316,6 +321,7 @@ h1, h2, h3 {
   min-height: 100vh;
   background-color: #fff;
 }
+
 .bottom-dir {
   h3 {
     margin: 0 0 $vertical-rhythm;

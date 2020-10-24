@@ -19,7 +19,7 @@ $(function(){
 const dealtWithResult = (result) => {
   let $mcSpan = $('#mc-msg');
   if(result.result == 'success') {
-    $mcSpan.text('Thanks means a lot')
+    $mcSpan.text('Thanks means a lot.')
   } else {
     let msg = result.msg.split('-')[1]
     $mcSpan.text(msg)

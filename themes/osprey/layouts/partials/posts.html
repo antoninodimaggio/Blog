@@ -1,11 +1,11 @@
-<section class="blog-home" id="blog">
+<section class="post-home" id="posts">
   <div class="container">
     <div class="row center-xs">
-      <div class="col-xs-12"><h1>Blog</h1></div>
+      <div class="col-xs-12"><h1>Posts</h1></div>
     </div>
     <div class="row">
       <div class="col-xs-12 posts-list">
-        {{ range first 5 (where .Site.RegularPages "Section" "blog") }}
+        {{ range first 5 (where .Site.RegularPages "Section" "posts") }}
           <article>
             <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
             <div class=sub-header>
@@ -22,7 +22,7 @@
     </div>
     <div class="row center-xs">
       <div class="col-xs-12 bottom-dir">
-        <h3><a href="{{ $.Site.BaseURL }}/blog/">View All Posts</a></h3>
+        <h3><a href="{{ $.Site.BaseURL }}/posts/">View All Posts</a></h3>
         <h3><a href="{{ .Site.BaseURL }}/tags/">View All Posts by Tag</a></h3>
       </div>
     </div>

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<!-- Renders: Physical blog posts -->
+<!-- Renders: Physical posts -->
 <html lang="{{ .Site.LanguageCode }}">
   {{ partial "head.html" . }}
   <body>
     {{ partial "body-top" . }}
     <main>
 
-      <section class="blog container">
+      <section class="post container">
         <h1>{{ if .Params.heading }} {{ .Params.heading }} {{ else }} {{ .Title }} {{ end }}</h1>
         <section class="content">
           <div class="sub-header">

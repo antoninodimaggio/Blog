@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<!-- Renders: List of blog posts -->
+<!-- Renders: List of posts -->
 <html lang="{{ .Site.LanguageCode }}">
   {{ partial "head.html" . }}
   <body>
     {{ partial "body-top" . }}
     <main>
 
-      <section class="blog" id="blog">
+      <section class="post" id="post">
         <div class="container">
           <div class="row center-xs">
             <div class="col-xs-12"><h1>{{ humanize .Type }}</h1></div>

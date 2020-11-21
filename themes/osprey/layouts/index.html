@@ -8,13 +8,13 @@
       <!-- About -->
       {{ partial "about.html" . }}
 
-      <!-- Blog -->
-      {{ if not (eq (len (where .Site.RegularPages "Section" "blog")) 0) }}
-        {{ partial "blog.html" . }}
+      <!-- Posts -->
+      {{ if not (eq (len (where .Site.RegularPages "Section" "posts")) 0) }}
+        {{ partial "posts.html" . }}
       {{ end }}
 
-      <!-- Newsletter -->
-      {{ partial "newsletter.html"}}
+      <!-- Subscribe -->
+      {{ partial "subscribe.html"}}
 
 
     </main>

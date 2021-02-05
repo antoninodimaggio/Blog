@@ -1,6 +1,5 @@
 title = "Antonino DiMaggio"
 baseURL = "https://antoninodimaggio.com"
-# "data science", "machine learning", "renewables"
 tags = []
 languageCode = "en-US"
 config = "config.toml"
@@ -26,9 +25,9 @@ buildDrafts = false
 
 [Params]
     headline = 'antonino dimaggio'
-    subheadline = "" # data science, renewables
+    subheadline = ""
     author = "Antonino DiMaggio"
-    description = "data science, renewables"
+    description = "Hello my name is Antonino — Tony for short. I live in New Jersey and work at Tesla. In the past, I worked on problems in renewable energy at NREL and studied computer science at Rutgers. I haphazardly write"
     logoSmall = "/images/profile_photo_1080_1080.jpg"
     twitterCardImg = "/images/default_summary_card_large_1440_720.jpg"
     favicon = "/images/favicon.ico"

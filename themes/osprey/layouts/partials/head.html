@@ -48,7 +48,11 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@{{ .Site.Params.twitter }}">
     <meta name="twitter:creator" content="@{{ .Site.Params.twitter }}">
-    <meta name="twitter:description" content="{{ .Description }}">
+    {{ if .Description }}
+      <meta name="twitter:description" content="{{ .Description }}">
+    {{ else if .Site.Params.description }}
+      <meta name="twitter:description" content="{{ .Site.Params.description }}">
+    {{ end }}
     <!-- Add to front matter of post-->
     {{ if .Params.title }}
       <meta name="twitter:title" content="{{ .Params.title }}">

@@ -54,4 +54,11 @@
       $('html').style.overflowY = 'scroll'
     }
   })
+
+  // add target='_blank' to external links
+  $$('a').forEach(function (links) {
+    if (links.hostname != window.location.hostname) {
+       links.target = '_blank'
+    }
+  })
 })()

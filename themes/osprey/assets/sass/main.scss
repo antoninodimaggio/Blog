@@ -124,7 +124,7 @@ h1, h2, h3 {
 }
 .sub-header, time {
   @include size(p);
-  color: $storm;
+  color: $black;
   margin-bottom: $vertical-rhythm;
 }
 .content {

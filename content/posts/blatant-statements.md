@@ -7,7 +7,7 @@ draft: false
 hasmath: false
 linktitle: Blatant Statements
 tags:
-  - human nature
+  - thoughts
 title: Blatant Statements
 ---
 

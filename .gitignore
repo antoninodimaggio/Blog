@@ -4,7 +4,4 @@
 # project
 public/
 resources/
-notebooks/data/
 
-#python
-.ipynb_checkpoints
